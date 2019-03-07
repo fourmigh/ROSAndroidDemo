@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:gravity="center"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <TextView
+            android:text="@string/master_uri"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:gravity="center" style="@style/Base.TextAppearance.AppCompat.Large"/>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:id="@+id/tvHeader"
+                android:text="http://"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Base.TextAppearance.AppCompat.Large"/>
+
+        <EditText
+                android:id="@+id/etIP"
+                android:text="192.168.22.209"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:inputType="number"
+                android:maxLength="15"
+                style="@style/Base.TextAppearance.AppCompat.Large"/>
+
+        <TextView
+                android:id="@+id/tvColon"
+                android:text=":"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Base.TextAppearance.AppCompat.Large"/>
+
+        <EditText
+                android:id="@+id/etPort"
+                android:text="11311"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:inputType="number"
+                android:maxLength="5"
+                style="@style/Base.TextAppearance.AppCompat.Large"/>
+
+    </LinearLayout>
+    <Button
+            android:text="@string/connect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/btnConnect"/>
+</LinearLayout>

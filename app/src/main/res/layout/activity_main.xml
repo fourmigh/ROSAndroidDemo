@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/main_view"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical">
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <RadioGroup
+                android:gravity="center"
+                android:padding="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <RadioButton
+                    android:id="@+id/set_pose_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="setPoseClicked"
+                    android:text="@string/set_pose"/>
+
+            <RadioButton
+                    android:id="@+id/set_goal_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:onClick="setGoalClicked"
+                    android:text="@string/set_goal"/>
+        </RadioGroup>
+
+        <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:src="@android:drawable/ic_menu_rotate"
+                android:id="@+id/ibRefresh"/>
+        <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:src="@android:drawable/ic_menu_save"
+                android:id="@+id/ibSaveMap"/>
+        <LinearLayout
+                android:id="@+id/llTopBar"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="50dp"
+                android:background="#ff404040"
+                android:gravity="right"
+                android:orientation="horizontal"/>
+    </LinearLayout>
+
+    <org.ros.android.view.RosTextView
+            android:id="@+id/rosTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="32sp" />
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+        <org.ros.android.view.visualization.VisualizationView
+                android:id="@+id/visualizationView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        <org.ros.android.view.VirtualJoystickView
+                android:id="@+id/virtualJoystickView"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <ToggleButton
+                android:textOff="@string/follow_me"
+                android:textOn="@string/follow_me"
+                android:checked="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/tbFollowMe"/>
+
+        <ToggleButton
+                android:textOff="@string/joystick"
+                android:textOn="@string/joystick"
+                android:checked="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/tbJoystick"/>
+    </LinearLayout>
+
+</LinearLayout>

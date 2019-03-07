@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">ROSAndroidDemo</string>
+    <string name="action_settings">Settings</string>
+    <string name="master_uri">Master URI</string>
+    <string name="connect">Connect</string>
+    <string name="follow_me">Follow Me</string>
+    <string name="joystick">Joystick</string>
+    <string name="set_pose">Set Pose</string>
+    <string name="set_goal">Set Goal</string>
+    <string name="connected">Connected!</string>
+    <string name="error_urisyntax">Invalid URI.</string>
+    <string name="error_xmlrpctimeout">Master unreachable!</string>
+    <string name="error_econnrefused">Unable to communicate with master!</string>
+    <string name="error_unknownhost">Unable to resolve URI hostname!</string>
+    <string name="error_exception">Communication error!</string>
+    <string name="dialog_shutdown_msg">Continue shutting down?</string>
+    <string name="shutdown">Shutdown</string>
+    <string name="notification_shutdown_msg">Tap to shutdown.</string>
+</resources>
